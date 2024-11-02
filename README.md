@@ -6,6 +6,10 @@
 
 https://gitee.com/kang-kang520/WebDriverUIFrame
 
+### CSDN：
+
+https://blog.csdn.net/qq_45594960/article/details/142104058?spm=1001.2014.3001.5502
+
 ## 环境准备
 
 - Java 环境 （我使用的是Java21 版本）注意： 需要配置 JAVA_HOME（Maven 运行需要查找 JAVA_HOME 环境 ）
