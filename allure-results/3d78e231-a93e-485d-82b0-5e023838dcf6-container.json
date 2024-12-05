@@ -1,1 +1,0 @@
-{"uuid":"3d78e231-a93e-485d-82b0-5e023838dcf6","name":"测试百度","children":["dcdaf79f-8dcc-4aff-8b7d-aa11ba376da3"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1733404562479,"stop":1733404562486}],"afters":[],"start":1733404562444,"stop":1733404565293}
