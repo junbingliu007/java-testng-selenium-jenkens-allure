@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="All Test Suite" duration-ms="2669" started-at="2024-09-08T04:32:20Z" finished-at="2024-09-08T04:32:23Z">
+  <suite name="All Test Suite" duration-ms="2964" started-at="2024-12-05T13:17:35Z" finished-at="2024-12-05T13:17:38Z">
     <groups>
     </groups>
-    <test name="测试百度" duration-ms="2669" started-at="2024-09-08T04:32:20Z" finished-at="2024-09-08T04:32:23Z">
+    <test name="测试百度" duration-ms="2964" started-at="2024-12-05T13:17:35Z" finished-at="2024-12-05T13:17:38Z">
       <class name="org.ceiling.controller.BaiduSearchController">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:org.ceiling.controller.BaiduSearchController@4e6d7365]" name="setUp" is-config="true" duration-ms="17" started-at="2024-09-08T04:32:20Z" finished-at="2024-09-08T04:32:20Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:org.ceiling.controller.BaiduSearchController@773bd77b]" name="setUp" is-config="true" duration-ms="31" started-at="2024-12-05T13:17:35Z" finished-at="2024-12-05T13:17:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testBaiduSearchContent()[pri:0, instance:org.ceiling.controller.BaiduSearchController@4e6d7365]" name="testBaiduSearchContent" duration-ms="2594" started-at="2024-09-08T04:32:20Z" finished-at="2024-09-08T04:32:23Z">
+        <test-method status="PASS" signature="testBaiduSearchContent()[pri:0, instance:org.ceiling.controller.BaiduSearchController@773bd77b]" name="testBaiduSearchContent" duration-ms="2860" started-at="2024-12-05T13:17:35Z" finished-at="2024-12-05T13:17:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBaiduSearchContent -->

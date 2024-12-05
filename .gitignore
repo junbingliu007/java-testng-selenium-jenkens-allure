@@ -40,3 +40,4 @@ build/
 ./allure-report/
 ./allure-results/
 ./screenshot/
+./log/

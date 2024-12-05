@@ -2,16 +2,18 @@ package org.ceiling.utils;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.ceiling.api.EnvironmentType;
+import org.ceiling.base.BasePage;
 import org.ceiling.enums.BrowserType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-
-import java.time.Duration;
-import java.util.concurrent.TimeUnit;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class WebDriverUtil {
+
+    private static final Logger logger = LoggerFactory.getLogger(BasePage.class);
 
     private static WebDriver driver;
 
@@ -26,14 +28,17 @@ public class WebDriverUtil {
                 case CHROME:
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
+                    logger.info("CHROME 浏览器启动成功，正在打开网站...");
                     break;
                 case FIREFOX:
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
+                    logger.info("FIREFOX 浏览器启动成功，正在打开网站...");
                     break;
                 case EDGE:
                     WebDriverManager.edgedriver().setup();
                     driver = new EdgeDriver();
+                    logger.info("EDGE 浏览器启动成功，正在打开网站...");
                     break;
                 default:
                     throw new IllegalArgumentException("不支持的浏览器类型: " + browserType);

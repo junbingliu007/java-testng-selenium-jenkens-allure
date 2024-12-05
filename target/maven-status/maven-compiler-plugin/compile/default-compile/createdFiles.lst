@@ -6,6 +6,6 @@ org\ceiling\api\EnvironmentType.class
 org\ceiling\enums\BrowserType.class
 org\ceiling\utils\WebDriverUtil$1.class
 org\ceiling\utils\WebDriverUtil.class
-org\ceiling\App.class
 org\ceiling\service\BaiduService.class
 org\ceiling\service\TestService.class
+org\ceiling\utils\CrossPlatformFileUploader.class

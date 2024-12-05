@@ -7,14 +7,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.time.Duration;
 import java.util.List;
-import java.util.logging.Logger;
 
 public class BasePage {
 
+    private static final Logger logger = LoggerFactory.getLogger(BasePage.class);
     protected WebDriver driver;
-    private static final Logger logger = Logger.getLogger(BasePage.class.getName());
+
 
     // 构造函数，初始化 WebDriver
     public BasePage() {
@@ -52,8 +54,4 @@ public class BasePage {
         return getElements(locator, 10);
     }
 
-
-
-
 }
-
