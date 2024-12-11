@@ -169,9 +169,10 @@ public class BaseHandler {
     }
 
 
-    /**
+     /**
      * Take a screenshot and save it to the specified path
      * @param filePath The path where the screenshot will be saved
+     * @param fileName The name where the screenshot will be saved
      * @throws IOException If there's an issue with saving the screenshot
      */
     public void takeScreenshot(String filePath, String fileName) throws IOException {
@@ -180,12 +181,24 @@ public class BaseHandler {
 //        FileUtils.copyFile(screenshot, new File(filePath, fileName + ".png"));
         FileUtils.copyFile(screenshot, new File(fullPath));
         logger.info("Screenshot saved to: " + fullPath);
-
         // Convert screenshot to byte array
         byte[] screenshotBytes = FileUtils.readFileToByteArray(screenshot);
-
         // Attach screenshot to Allure report
-        Allure.addAttachment("Screenshot", new ByteArrayInputStream(screenshotBytes));
+        Allure.addAttachment(fileName, new ByteArrayInputStream(screenshotBytes));
+    }
+
+    
+    /**
+     * Take a screenshot and save it to the specified path
+     * @param fileName The name where the screenshot will be saved
+     * @throws IOException If there's an issue with saving the screenshot
+     */
+    public void takeScreenshotNotSaveLocal(String fileName) throws IOException {
+        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        // Convert screenshot to byte array
+        byte[] screenshotBytes = FileUtils.readFileToByteArray(screenshot);
+        // Attach screenshot to Allure report
+        Allure.addAttachment(fileName, new ByteArrayInputStream(screenshotBytes));
     }
 
 
