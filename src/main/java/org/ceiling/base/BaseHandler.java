@@ -3,6 +3,7 @@ package org.ceiling.base;
 import io.qameta.allure.Allure;
 import org.apache.commons.io.FileUtils;
 import org.ceiling.enums.BrowserType;
+import org.ceiling.utils.PropertiesUtil;
 import org.ceiling.utils.WebDriverUtil;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -16,13 +17,14 @@ import java.io.IOException;
 public class BaseHandler {
 
     private static final Logger logger = LoggerFactory.getLogger(BaseHandler.class);
-
     private final WebDriver driver;
+    private static final BrowserType browserType = BrowserType.valueOf(PropertiesUtil.getProperty("BROWSER_TYPE"));
+
 
 
     // Constructor to initialize WebDriver from WebDriverUtil
     public BaseHandler() {
-        this.driver = WebDriverUtil.getDriver(BrowserType.CHROME); // Get driver from WebDriverUtil
+        this.driver = WebDriverUtil.getDriver(browserType); // Get driver from WebDriverUtil
     }
 
     /**

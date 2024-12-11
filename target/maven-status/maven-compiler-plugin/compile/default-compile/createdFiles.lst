@@ -1,11 +1,12 @@
-org\ceiling\pages\BaiduElement.class
-org\ceiling\base\BasePage.class
-org\ceiling\base\BaseHandler.class
 org\ceiling\controller\BaiduSearchController.class
 org\ceiling\api\EnvironmentType.class
 org\ceiling\enums\BrowserType.class
-org\ceiling\utils\WebDriverUtil$1.class
 org\ceiling\utils\WebDriverUtil.class
-org\ceiling\service\BaiduService.class
 org\ceiling\service\TestService.class
 org\ceiling\utils\CrossPlatformFileUploader.class
+org\ceiling\pages\BaiduElement.class
+org\ceiling\base\BasePage.class
+org\ceiling\base\BaseHandler.class
+org\ceiling\utils\PropertiesUtil.class
+org\ceiling\utils\WebDriverUtil$1.class
+org\ceiling\service\BaiduService.class

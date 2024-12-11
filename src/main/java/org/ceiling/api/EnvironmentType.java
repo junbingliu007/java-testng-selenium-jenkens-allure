@@ -1,10 +1,12 @@
 package org.ceiling.api;
 
+import org.ceiling.utils.PropertiesUtil;
+
 public enum EnvironmentType {
 
-    PROD("https://www.baidu.com"),
-    TEST("https://www.baidu.com"),
-    DEV("https://www.baidu.com");
+    PROD(PropertiesUtil.getProperty("PROD_URL")),
+    TEST(PropertiesUtil.getProperty("TEST_URL")),
+    DEV(PropertiesUtil.getProperty("DEV_URL"));
 
     private final String url;
 

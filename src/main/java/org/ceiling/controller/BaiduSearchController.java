@@ -4,6 +4,8 @@ import io.qameta.allure.*;
 import org.ceiling.service.BaiduService;
 
 import java.io.IOException;
+
+import org.ceiling.utils.WebDriverUtil;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -39,6 +41,7 @@ public class BaiduSearchController {
             Thread.sleep(2000);
             Allure.step("将百度搜索内容进行截图");
             baiduService.takeScreenshot("screenshot\\baidu", "百度搜索结果截图");
+            WebDriverUtil.quitDriver();
         } catch (IOException | InterruptedException e) {
             throw new RuntimeException(e);
         }

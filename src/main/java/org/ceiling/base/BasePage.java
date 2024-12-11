@@ -1,6 +1,7 @@
 package org.ceiling.base;
 
 import org.ceiling.enums.BrowserType;
+import org.ceiling.utils.PropertiesUtil;
 import org.ceiling.utils.WebDriverUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,12 +16,13 @@ import java.util.List;
 public class BasePage {
 
     private static final Logger logger = LoggerFactory.getLogger(BasePage.class);
-    protected WebDriver driver;
+    private final WebDriver driver;
+    private static final BrowserType browserType = BrowserType.valueOf(PropertiesUtil.getProperty("BROWSER_TYPE"));
 
 
     // 构造函数，初始化 WebDriver
     public BasePage() {
-        this.driver = WebDriverUtil.getDriver(BrowserType.CHROME);
+        this.driver = WebDriverUtil.getDriver(browserType);
     }
 
     // 显示等待获取单个元素
