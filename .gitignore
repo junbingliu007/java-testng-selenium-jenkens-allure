@@ -1,4 +1,4 @@
-target/
+/target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
@@ -39,5 +39,5 @@ build/
 .idea
 /allure-report/
 /allure-results/
-./screenshot/
-./logs/
+/screenshot/
+/logs/
