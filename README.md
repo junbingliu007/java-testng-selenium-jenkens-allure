@@ -816,6 +816,7 @@ pom文件新增内容如下：
 ~~~~xml
 
   <build>
+    <defaultGoal>compile</defaultGoal>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -823,15 +824,15 @@ pom文件新增内容如下：
         <version>3.11.0</version>
         <configuration>
           <encoding>UTF-8</encoding>
-          <source>1.8</source>
-          <target>1.8</target>
+          <source>21</source>
+          <target>21</target>
         </configuration>
       </plugin>
       <!--maven-surefire-plugin的test目标会自动执行测试源码路径（默认为src/test/java/）下所有符合一组命名模式的测试类-->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.7.1</version>
+        <version>3.0.0-M5</version>
         <configuration>
           <!-- 测试失败后，是否忽略并继续测试 -->
           <testFailureIgnore>true</testFailureIgnore>
