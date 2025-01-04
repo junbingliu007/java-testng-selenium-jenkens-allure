@@ -28,6 +28,10 @@ https://blog.csdn.net/qq_45594960/article/details/142104058?spm=1001.2014.3001.5
 
 ![image-20250104163520890](image/image-20250104163520890.png)
 
+注意：如果使用低版本Maven 想要在执行 `mvn clean test`  时候 更改 JAVA_HOME 指定 JDK 版本
+
+那么请参考如下：[如何修改Maven JAVA_HOME 指定JDK版本](https://blog.csdn.net/qq_45594960/article/details/144592462?spm=1001.2014.3001.5501)
+
 ## 项目目录结构介绍
 
 ```
