@@ -4,9 +4,7 @@ import org.ceiling.utils.PropertiesUtil;
 
 public enum EnvironmentType {
 
-    PROD(PropertiesUtil.getProperty("PROD_URL")),
-    TEST(PropertiesUtil.getProperty("TEST_URL")),
-    DEV(PropertiesUtil.getProperty("DEV_URL"));
+    TEST(PropertiesUtil.getProperty("driver.url"));
 
     private final String url;
 
@@ -22,7 +20,6 @@ public enum EnvironmentType {
     public static String getUrlByType(EnvironmentType environmentType) {
         return environmentType.getUrl();
     }
-
 
 
 

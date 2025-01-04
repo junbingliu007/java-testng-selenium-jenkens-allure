@@ -1,26 +1,33 @@
 package org.ceiling.service;
 
-import org.ceiling.base.BaseHandler;
-import org.ceiling.pages.BaiduElement;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import org.ceiling.base.BaseService;
+import org.ceiling.pages.BaiduPage;
 
-public class BaiduService extends BaseHandler {
+/**
+ * service 元素操作层 (点击 输入等操作)
+ */
+public class BaiduService extends BaseService {
 
-    private static final BaiduElement baiduElement;
+    private static final BaiduPage BAIDU_PAGE;
 
     static {
-        baiduElement = new BaiduElement();
+        BAIDU_PAGE = new BaiduPage();
     }
 
-
+    /**
+     *
+     * @param content 输入框输入内容
+     */
     public void inputContent(String content){
 
-        inputText(baiduElement.findInputContentElement(),content );
+        inputText(BAIDU_PAGE.findInputContentElement(), content);
 
     }
 
+    /**
+     * 点击百度搜索按钮元素
+     */
     public void clickSearchButton() {
-        clickElement(baiduElement.findSearchButtonElement());
+        clickElement(BAIDU_PAGE.findSearchButtonElement());
     }
 }

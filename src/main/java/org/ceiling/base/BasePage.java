@@ -1,5 +1,4 @@
 package org.ceiling.base;
-
 import org.ceiling.enums.BrowserType;
 import org.ceiling.utils.PropertiesUtil;
 import org.ceiling.utils.WebDriverUtil;
@@ -10,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import java.time.Duration;
 import java.util.List;
 
@@ -17,7 +17,7 @@ public class BasePage {
 
     private static final Logger logger = LoggerFactory.getLogger(BasePage.class);
     private final WebDriver driver;
-    private static final BrowserType browserType = BrowserType.valueOf(PropertiesUtil.getProperty("BROWSER_TYPE"));
+    private static final BrowserType browserType = BrowserType.valueOf(PropertiesUtil.getProperty("driver.browser.type", "CHROME").toUpperCase());
 
 
     // 构造函数，初始化 WebDriver

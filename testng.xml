@@ -2,15 +2,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true"
-          name="测试百度">
+          name="D:/DEV/Project/JavaProject/githupPro/JavaWebUIFrame/src/test/java/org/ceiling/controller/TestBaiduSearchController.java">
         <classes>
-            <class name="org.ceiling.controller.BaiduSearchController">
+            <class name="org.ceiling.controller.TestBaiduSearchController">
                 <methods>
-                    <include name="testBaiduSearchContent"/>
-
+                    <include name="testBaiduSearchController"/>
                 </methods>
             </class>
         </classes>
     </test>
-
 </suite>

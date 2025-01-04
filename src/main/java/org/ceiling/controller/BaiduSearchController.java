@@ -4,23 +4,17 @@ import io.qameta.allure.*;
 import org.ceiling.service.BaiduService;
 
 import java.io.IOException;
-
-import org.ceiling.utils.WebDriverUtil;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+/**
+ * controller 元素逻辑处理层
+ * example 百度搜索逻辑:
+ *    1 先在搜索框中输入要搜索的内容信息
+ *    2 点击搜索按钮 进行搜索
+ */
 public class BaiduSearchController {
 
-
-    private static BaiduService baiduService = new BaiduService();
-
-    @BeforeTest
-    public void setUp(){
-        /*
-         * 在每个测试类之前执行一次
-         * */
-        baiduService = new BaiduService();
-    }
+    private static final BaiduService baiduService = new BaiduService();
 
     @Test
     @Feature("模块名称")
@@ -41,14 +35,13 @@ public class BaiduSearchController {
             Thread.sleep(2000);
             Allure.step("将百度搜索内容进行截图");
             baiduService.takeScreenshot("screenshot\\baidu", "百度搜索结果截图");
-            WebDriverUtil.quitDriver();
+            // 退出浏览器驱动
+            baiduService.quitDriver();
         } catch (IOException | InterruptedException e) {
             throw new RuntimeException(e);
         }
 
     }
-
-
 
 
 }
