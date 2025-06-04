@@ -2,11 +2,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true"
-          name="D:/DEV/Project/JavaProject/githupPro/JavaWebUIFrame/src/test/java/org/ceiling/controller/TestBaiduSearchController.java">
+          name="C:/Users/ljl/IdeaProjects/JavaWebUIFrame/src/main/java/org/ceiling/controller/BaiduSearchController.java">
         <classes>
-            <class name="org.ceiling.controller.TestBaiduSearchController">
+            <class name="org.ceiling.controller.BaiduSearchController">
                 <methods>
-                    <include name="testBaiduSearchController"/>
+                    <include name="testBaiduSearchContent"/>
                 </methods>
             </class>
         </classes>
