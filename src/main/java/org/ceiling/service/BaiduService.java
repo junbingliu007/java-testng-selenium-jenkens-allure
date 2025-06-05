@@ -8,17 +8,16 @@ import org.ceiling.pages.BaiduPage;
  */
 public class BaiduService extends BaseService {
 
-    private static final BaiduPage BAIDU_PAGE;
+    private static final BaiduPage BAIDU_PAGE ;
 
     static {
         BAIDU_PAGE = new BaiduPage();
     }
 
     /**
-     *
      * @param content 输入框输入内容
      */
-    public void inputContent(String content){
+    public void inputContent(String content) {
 
         inputText(BAIDU_PAGE.findInputContentElement(), content);
 

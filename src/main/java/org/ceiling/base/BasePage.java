@@ -25,6 +25,10 @@ public class BasePage {
         this.driver = WebDriverUtil.getDriver(browserType);
     }
 
+    public WebDriver getDriver() {
+        return driver;
+    }
+
     // 显示等待获取单个元素
     public WebElement getElement(By locator, int timeoutInSeconds) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
