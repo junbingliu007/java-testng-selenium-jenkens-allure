@@ -70,7 +70,8 @@ public class WebDriverUtil {
         WebDriver driver;
         switch (browserType) {
             case CHROME:
-                WebDriverManager.chromedriver().setup();
+//                WebDriverManager.chromedriver().setup();
+                WebDriverManager.chromedriver().avoidExport();
                 ChromeOptions chromeOptions = new ChromeOptions();
                 if (headless) {
                     chromeOptions.addArguments(HEADLESS_OPTION);  // 启用无头模式
