@@ -70,15 +70,19 @@ public class WebDriverUtil {
         WebDriver driver;
         switch (browserType) {
             case CHROME:
-//                WebDriverManager.chromedriver().setup();
-//                WebDriverManager.chromedriver().avoidExport();
+               /* WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOptions = new ChromeOptions();
                 if (headless) {
                     chromeOptions.addArguments(HEADLESS_OPTION);  // 启用无头模式
                     chromeOptions.addArguments(WINDOW_SIZE_OPTION);  // 设置窗口大小
                 }
-                System.setProperty("webdriver.chrome.driver", "C:/Users/ljl/.cache/selenium/chromedriver/win64/137.0.7151.68/chromedriver.exe");
                 driver = new ChromeDriver(chromeOptions);
+                logger.info("CHROME browser started successfully, opening the website...");*/
+
+//                WebDriverManager.chromedriver().avoidExport();
+
+                System.setProperty("webdriver.chrome.driver", "C:/Users/ljl/.cache/selenium/chromedriver/win64/137.0.7151.68/chromedriver.exe");
+                driver = new ChromeDriver();
                 logger.info("CHROME browser started successfully, opening the website...");
                 break;
             case FIREFOX:
