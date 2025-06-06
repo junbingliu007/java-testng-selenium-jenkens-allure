@@ -80,7 +80,7 @@ public class WebDriverUtil {
                 logger.info("CHROME browser started successfully, opening the website...");*/
 
 //                WebDriverManager.chromedriver().avoidExport();
-                WebDriverManager.chromedriver().setup();
+//                WebDriverManager.chromedriver().setup();
                 System.setProperty("webdriver.chrome.driver", "C:/Users/ljl/.cache/selenium/chromedriver/win64/137.0.7151.68/chromedriver.exe");
                 driver = new ChromeDriver();
                 logger.info("CHROME browser started successfully, opening the website...");
