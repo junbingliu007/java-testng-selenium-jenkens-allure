@@ -55,6 +55,14 @@ public class SauceDemoController {
 
         Allure.step("<选择商品>");
         chooseGoodsService.chooseGoods(selectionMethod,productCount);
+        try {
+            Thread.sleep(2000);
+            Allure.step("选择商品截图");
+            chooseGoodsService.takeScreenshot("screenshot\\sauce", "选择商品截图");
+
+        } catch (IOException | InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         Allure.step("<点击购物车>");
         chooseGoodsService.clickShoppingCartButton();
 

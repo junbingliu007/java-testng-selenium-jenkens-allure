@@ -821,7 +821,6 @@ public class BaiduPage extends BasePage {
 package org.ceiling.service;
 
 import org.ceiling.base.BaseService;
-import org.ceiling.pages.BaiduPage;
 
 /**
  * service 元素操作层 (点击 输入等操作)
@@ -838,7 +837,7 @@ public class BaiduService extends BaseService {
      *
      * @param content 输入框输入内容
      */
-    public void inputContent(String content){
+    public void inputContent(String content) {
 
         inputText(BAIDU_PAGE.findInputContentElement(), content);
 
@@ -866,9 +865,9 @@ public class BaiduService extends BaseService {
 package org.ceiling.controller;
 
 import io.qameta.allure.*;
-import org.ceiling.service.BaiduService;
 
 import java.io.IOException;
+
 import org.testng.annotations.Test;
 
 /**
@@ -889,7 +888,7 @@ public class BaiduSearchController {
     @Step("操作步骤")
     @Severity(SeverityLevel.BLOCKER) // 用例等级
     @Link("https://www.baidu.com") // 定义链接
-    public static void testBaiduSearchContent(){
+    public static void testBaiduSearchContent() {
 
         Allure.step("在百度输入框中输入内容");
         baiduService.inputContent("123");
