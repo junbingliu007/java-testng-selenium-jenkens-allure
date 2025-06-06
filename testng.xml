@@ -3,12 +3,12 @@
 <suite name="SauceDemo Suite" parallel="tests" thread-count="1">
     <test verbose="2" preserve-order="true"
           name="C:/Users/ljl/IdeaProjects/JavaWebUIFrame/src/main/java/org/ceiling/controller/SauceDemoController.java">
-        <parameter name="productCount" value="3"/>
-<!--        <parameter name="selectionMethod" value="sequential"/>-->
-        <parameter name="selectionMethod" value="random"/>
-        <parameter name="firstname" value="John"/>
-        <parameter name="lastname" value="Doe"/>
-        <parameter name="postcode" value="12345"/>
+<!--        <parameter name="productCount" value="3"/>-->
+<!--&lt;!&ndash;        <parameter name="selectionMethod" value="sequential"/>&ndash;&gt;-->
+<!--        <parameter name="selectionMethod" value="random"/>-->
+<!--        <parameter name="firstname" value="John"/>-->
+<!--        <parameter name="lastname" value="Doe"/>-->
+<!--        <parameter name="postcode" value="12345"/>-->
         <classes>
             <class name="org.ceiling.controller.SauceDemoController">
                 <methods>
